@@ -1,0 +1,19 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable class-methods-use-this */
+import { Request, Response } from 'express';
+import UserService from './user.service';
+
+class UserController {
+  async signin(req: Request, res: Response) {
+    const { email, password } = req.body;
+    const userService = new UserService();
+    const user = await userService.signin({ email, password });
+    return res.status(200).send(user);
+  }
+
+  async signup(req: Request, res: Response) {
+    return res.send('Criando um usuário (no controller)');
+  }
+}
+
+export default UserController;

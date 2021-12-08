@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import {
   Entity,
@@ -10,7 +11,6 @@ import {
 } from 'typeorm';
 
 // SE ALGUMA COISA NÃO FUNCIONAR É PRA TENTAR VER SE O ERRO ESTA VINDO DESSE IMPORT BUGADO AQUI
-// eslint-disable-next-line import/extensions
 import User from './User';
 
 @Entity()

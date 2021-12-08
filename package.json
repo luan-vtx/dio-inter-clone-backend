@@ -22,11 +22,14 @@
   },
   "homepage": "https://github.com/luan-vtx/dio-inter-clone-backend#readme",
   "dependencies": {
+    "crypto-js": "^4.1.1",
     "express": "^4.17.1",
     "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
     "typeorm": "^0.2.41"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.0.2",
     "@types/express": "^4.17.13",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",

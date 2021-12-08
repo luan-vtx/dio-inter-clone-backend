@@ -1,12 +1,23 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 import express from 'express';
+import { createConnection } from 'typeorm';
+import routes from './routes';
+import globalErrors from './middlewares/globalErrors';
 
-const app = express();
-const PORT = 3333;
+createConnection().then((connection) => {
+  const app = express();
+  const PORT = 3333;
 
-app.get('/', (request, response) => response.json(
-  { message: 'Meu server Express, Typescript e ESLint!' },
-));
+  // app.use(cors());
+  app.use(express.json());
+  app.use(routes);
 
-app.listen(3333, () => {
-  console.log(`Server is running at http://localhost/${PORT}`);
+  app.use(globalErrors);
+
+  app.listen(PORT, () => {
+    console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
+  });
+}).catch((error) => {
+  console.log('Unable to connect to the database', error);
 });
