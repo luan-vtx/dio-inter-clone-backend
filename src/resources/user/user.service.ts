@@ -1,6 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 import { getRepository } from 'typeorm';
 import md5 from 'crypto-js/md5';
 

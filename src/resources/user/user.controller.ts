@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable class-methods-use-this */
 import { Request, Response } from 'express';
 import UserService from './user.service';
 
