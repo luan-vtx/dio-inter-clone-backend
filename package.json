@@ -22,8 +22,11 @@
   },
   "homepage": "https://github.com/luan-vtx/dio-inter-clone-backend#readme",
   "dependencies": {
+    "@types/cors": "^2.8.12",
+    "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1",
     "typeorm": "^0.2.41"

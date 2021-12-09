@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -10,7 +8,6 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-// SE ALGUMA COISA NÃO FUNCIONAR É PRA TENTAR VER SE O ERRO ESTA VINDO DESSE IMPORT BUGADO AQUI
 import User from './User';
 
 @Entity()

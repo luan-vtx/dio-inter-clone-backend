@@ -1,11 +1,9 @@
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 import { Request, Response } from 'express';
 import AppError from '../shared/error/AppError';
 
-function globalErrors(err: Error, request: Request, response: Response) {
+function globalErrors(err: Error, req: Request, res: Response) {
   if (err instanceof AppError) {
-    response.status(err.statusCode).json({
+    res.status(err.statusCode).json({
       status: 'error',
       message: err.message,
       data: err?.data,
@@ -14,7 +12,7 @@ function globalErrors(err: Error, request: Request, response: Response) {
 
   console.error(err);
 
-  return response.status(500).json({
+  return res.status(500).json({
     status: 'error',
     message: 'Internal server error',
   });

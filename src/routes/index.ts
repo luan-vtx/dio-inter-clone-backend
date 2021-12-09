@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { Router } from 'express';
 import userRouter from './user.routes';
 
